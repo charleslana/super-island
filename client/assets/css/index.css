@@ -1,5 +1,148 @@
 @import url('../fonts/lato/index.css');
+@import url('../fonts/thaleahfat/index.css');
 
 * {
   font-family: 'Lato', sans-serif;
+}
+
+.font-thaleahfat {
+  font-family: 'Thaleahfat', sans-serif;
+}
+
+body {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.home-color {
+  background-color: #4fc598;
+}
+
+.home-color .container {
+  max-width: 960px;
+}
+
+.navbar-dark {
+  background-color: #202429;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #5c94e9;
+}
+
+.ribbon {
+  background-image: url('../images/landing/ribbon.png');
+  width: 136px;
+  height: 180px;
+  cursor: pointer;
+}
+
+.container .ribbon {
+  position: absolute;
+  top: -8px;
+  right: 0;
+}
+
+.ribbon p {
+  line-height: 1rem;
+  margin-top: 10px;
+}
+
+.home-bg {
+  background-image: url('../images/landing/background_desktop.png');
+  background-size: cover;
+  background-position: center;
+  padding: 52px 0 35px 0;
+}
+
+.card-about {
+  background-image: url('../images/landing/background_about.jpg');
+  background-size: cover;
+}
+
+.card-about .online {
+  color: #9de06d;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-family: 'Thaleahfat', sans-serif;
+  position: relative;
+  padding: 0.1rem 1.5rem;
+  border-radius: 0;
+}
+
+.btn:before,
+.btn:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}
+
+.btn:before {
+  top: -3px;
+  left: 0;
+  border-top: 3px #202428 solid;
+  border-bottom: 3px #202428 solid;
+}
+
+.btn:after {
+  left: -3px;
+  top: 0;
+  border-left: 3px #202428 solid;
+  border-right: 3px #202428 solid;
+}
+
+.btn:active {
+  box-shadow: inset 3px 3px 0px 0px #197e4c !important;
+  border-radius: 0;
+}
+
+.btn-success {
+  background: #1ca863;
+  box-shadow: inset -3px -3px 0px 0px #197e4c !important;
+}
+
+.login .card-body {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.footer a:hover {
+  color: #5c94e9 !important;
 }

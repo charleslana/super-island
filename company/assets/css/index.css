@@ -1,0 +1,223 @@
+@import url('../fonts/raleway/index.css');
+@import url('../fonts/bungee/index.css');
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+.font-bungee {
+  font-family: 'Bungee', sans-serif;
+  letter-spacing: 5px;
+}
+
+body {
+  background-color: #131313;
+  color: white;
+}
+
+.navbar-dark {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-link {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+.nav-link.active:hover {
+  color: #e48632 !important;
+}
+
+.navbar-toggler span {
+  display: block;
+  background-color: #4f4f4f;
+  height: 3px;
+  width: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  left: 0;
+  opacity: 1;
+  transition: all 0.35s ease-out;
+  transform-origin: center left;
+}
+
+.navbar-toggler span:nth-child(1) {
+  transform: translate(0%, 0%) rotate(0deg);
+}
+
+.navbar-toggler span:nth-child(2) {
+  opacity: 1;
+}
+
+.navbar-toggler span:nth-child(3) {
+  transform: translate(0%, 0%) rotate(0deg);
+}
+
+.navbar-toggler span:nth-child(1) {
+  margin-top: 0.3em;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+  transform: translate(15%, -33%) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+  transform: translate(15%, 33%) rotate(-45deg);
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: transparent;
+}
+
+.icon-bar {
+  background-color: white !important;
+  height: 2px !important;
+  width: 25px !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.game-unit {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../images/featured_game.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 720px;
+  height: 100vh;
+}
+
+.card-img-overlay {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.card-img-overlay h1 {
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.orange {
+  color: #e48632;
+}
+
+hr {
+  width: 100%;
+  height: 2px !important;
+  background: #e48632;
+  margin: 20px 0;
+  border: none;
+  opacity: 1;
+}
+
+h4::after {
+  border-top: 2px solid;
+  border-color: #e48632;
+  content: '';
+  display: block;
+  height: 1px;
+  width: 60px;
+  margin: 13px 0 0 0;
+}
+
+p,
+.span {
+  font-size: 0.9375rem;
+}
+
+.browser-game {
+  text-decoration: none;
+}
+
+.browser-game:hover .card,
+.browser-game:hover i,
+.browser-game:hover .col-9 {
+  background-color: black;
+  color: white;
+}
+
+.form-control {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #e48632 !important;
+  border-radius: 0;
+  color: white;
+}
+
+.form-control:focus {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: white;
+}
+
+.btn-warning {
+  background-color: #e48632;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+}
+
+.btn-warning:hover {
+  background-color: white;
+}
+
+.my-5 {
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
+}
+
+*[id]:before {
+  display: block;
+  content: '';
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+}
+
+.footer .nav-link {
+  margin-top: 0;
+}
+
+.footer .nav-link:hover {
+  color: #e48632 !important;
+  text-decoration: underline;
+}
+
+.loader-wrapper {
+  background: #111;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 1050;
+  overflow: hidden;
+}
+
+.loader-wrapper section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.progress {
+  width: 0;
+  height: 2px;
+  background: #e48632;
+  border-radius: 0;
+}

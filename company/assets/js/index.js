@@ -20,7 +20,7 @@ function showProgress() {
       ease: Power4.easeIn,
       onComplete() {},
     },
-    0.2
+    0.5
   );
 }
 
@@ -39,6 +39,7 @@ function load() {
 }
 
 function handleComplete() {
+  document.getElementById('progress').style.width = '100%';
   const body = document.getElementsByTagName('body')[0];
   document.getElementById('loader').classList.add('animate__fadeOutUpBig');
   body.classList.remove('overflow-hidden');

@@ -75,7 +75,7 @@ a:hover {
 .container .ribbon {
   position: absolute;
   top: -8px;
-  right: 0;
+  right: 12px;
 }
 
 .ribbon p {

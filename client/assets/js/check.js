@@ -10,10 +10,10 @@ function checkBrowserVersion() {
   console.log(name);
   console.log(version);
   if (
-    (name == 'Chrome' && version < 108) ||
+    (name == 'Chrome' && version < 101) ||
     (name == 'Safari' && version < 7) ||
     (name == 'Firefox' && version < 95) ||
-    (name == 'Opera' && version < 94)
+    (name == 'Opera' && version < 90)
   ) {
     location.href = 'unsupported.html';
   }

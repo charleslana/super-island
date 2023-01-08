@@ -50,21 +50,11 @@ function handleComplete() {
 function handleLogin() {
   document.getElementById('loginForm').addEventListener('submit', e => {
     e.preventDefault();
+    toast('Preencha todos os campos');
     loading();
-    setTimeout(() => {
-      removeLoading();
+    const timeout = setTimeout(() => {
+      clearTimeout(timeout);
+      hideLoading();
     }, 1000);
   });
-}
-
-function loading() {
-  const body = document.getElementsByTagName('body')[0];
-  body.classList.add('overflow-hidden');
-  document.getElementById('loading').style.display = 'block';
-}
-
-function removeLoading() {
-  const body = document.getElementsByTagName('body')[0];
-  body.classList.remove('overflow-hidden');
-  document.getElementById('loading').style.display = 'none';
 }

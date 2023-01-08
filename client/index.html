@@ -59,7 +59,7 @@
     />
     <link
       rel="stylesheet"
-      href="assets/lib/bootstrap-5.0.2/css/bootstrap.min.css"
+      href="assets/lib/bootstrap@5.2.3/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="assets/lib/animate.css/animate.min.css" />
     <link
@@ -378,15 +378,43 @@
         </div>
       </div>
     </div>
+    <div
+      class="position-fixed top-0 start-50 translate-middle-x z-index-1065 pt-4"
+    >
+      <div
+        class="toast hide align-items-center text-white bg-warning border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-bs-delay="4000"
+        id="toast"
+      >
+        <div class="d-flex">
+          <div
+            class="toast-body d-flex justify-content-center align-items-center w-100"
+            id="toast-text"
+          >
+            Hello, world! This is a toast message.
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
     <div class="loader-wrapper" id="loader">
       <img src="assets/images/icons/preloader_v2.webp" alt="Loader image" />
     </div>
     <div class="loading-wrapper" id="loading">
       <img src="assets/images/icons/preloader_v2.webp" alt="Loading image" />
     </div>
-    <script src="assets/lib/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/bootstrap@5.2.3/js/bootstrap.bundle.min.js"></script>
     <script src="assets/lib/preloadjs/preloadjs.min.js"></script>
     <script src="assets/js/check.js"></script>
+    <script src="assets/js/util.js"></script>
     <script src="assets/js/index.js"></script>
   </body>
 </html>

@@ -38,6 +38,20 @@
       crossorigin="anonymous"
     />
     <link
+      rel="preload"
+      as="font"
+      href="assets/fonts/roboto/static/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="assets/fonts/roboto/static/KFOmCnqEu92Fr1Mu4mxK.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
       rel="icon"
       href="assets/images/favicon82x83.png"
       sizes="82x83"
@@ -47,6 +61,7 @@
       rel="stylesheet"
       href="assets/lib/bootstrap-5.0.2/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="assets/lib/animate.css/animate.min.css" />
     <link
       rel="stylesheet"
       href="assets/lib/fontawesome-free-6.2.1/css/all.min.css"
@@ -258,8 +273,26 @@
         </div>
       </footer>
     </section>
-    <section class="theme-dark text-white h-100">
-      <h1>Mobile</h1>
+    <section class="theme-dark text-white h-100 mobile">
+      <div class="container mt-2">
+        <div class="server">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-globe ms-1"></i>
+            <small class="fw-bold ms-1">Brazil</small>
+          </div>
+        </div>
+        <img
+          src="assets/images/logo/logo_mobile.png"
+          alt="Logo image"
+          height="175"
+          class="logo-mobile d-md-none"
+        />
+      </div>
+      <div
+        class="start animate__animated animate__flash animate__infinite animate__slower"
+      >
+        Toque para começar!
+      </div>
     </section>
     <div class="loader-wrapper" id="loader">
       <img src="assets/images/icons/preloader_v2.webp" alt="Loading image" />

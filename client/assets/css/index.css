@@ -1,5 +1,6 @@
 @import url('../fonts/lato/index.css');
 @import url('../fonts/thaleahfat/index.css');
+@import url('../fonts/roboto/index.css');
 
 * {
   font-family: 'Lato', sans-serif;
@@ -7,6 +8,10 @@
 
 .font-thaleahfat {
   font-family: 'Thaleahfat', sans-serif;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -169,4 +174,47 @@ a:hover {
   -ms-transform: translate(-50%, -50%);
   width: 106px;
   height: 70px;
+}
+
+.mobile {
+  background-image: url('../images/background/background_v3.png');
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.mobile i {
+  font-size: 12px;
+}
+
+.mobile small {
+  font-size: 11px;
+}
+
+.mobile .server {
+  width: 97px;
+  height: 19px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  padding: 2px;
+  font-weight: 500;
+}
+
+.mobile .logo-mobile {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  -ms-transform: translate(-50%, -10%);
+}
+
+.mobile .start {
+  font-size: 14px;
+  text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-family: 'Roboto', sans-serif;
 }

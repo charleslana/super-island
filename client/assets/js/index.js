@@ -18,6 +18,7 @@ function load() {
   body.classList.add('overflow-hidden');
   const queue = new createjs.LoadQueue(true);
   queue.loadManifest([
+    'assets/images/background/background_v3.png',
     'assets/images/icons/preloader_v2.webp',
     'assets/images/landing/160x80_grey.png',
     'assets/images/landing/background_about.jpg',
@@ -31,6 +32,7 @@ function load() {
     'assets/images/landing/download_android_pt.png',
     'assets/images/landing/facebook.png',
     'assets/images/landing/ribbon.png',
+    'assets/images/logo/logo_mobile.png',
     'assets/images/app_logo.png',
     'assets/images/favicon82x83.png',
     'assets/images/logo_mobile_noborder.png',

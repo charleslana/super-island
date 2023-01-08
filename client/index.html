@@ -54,77 +54,83 @@
     <link rel="stylesheet" href="assets/css/index.css" />
   </head>
   <body class="home-color d-flex flex-column h-100">
-    <nav class="navbar navbar-light navbar-dark text-white">
-      <div class="container position-relative d-block">
-        <div class="row align-items-center">
-          <div class="col-4">
-            <a class="navbar-brand" href="#"
-              ><img
-                src="assets/images/app_logo.png"
-                alt="App logo image"
-                width="71"
-                height="72"
-            /></a>
-            <div class="row mt-2">
-              <div class="col-auto">
-                <a href="#" target="_blank"
-                  ><i class="fas fa-newspaper"></i> Notícias</a
-                >
-              </div>
-              <div class="col-auto">
-                <a href="#" target="_blank"><i class="fas fa-book"></i> Wiki</a>
+    <section class="d-none d-md-block">
+      <nav class="navbar navbar-light navbar-dark text-white">
+        <div class="container position-relative d-block">
+          <div class="row align-items-center">
+            <div class="col-4">
+              <a class="navbar-brand" href="#"
+                ><img
+                  src="assets/images/app_logo.png"
+                  alt="App logo image"
+                  width="71"
+                  height="72"
+              /></a>
+              <div class="row mt-2">
+                <div class="col-auto">
+                  <a href="#" target="_blank"
+                    ><i class="fas fa-newspaper"></i> Notícias</a
+                  >
+                </div>
+                <div class="col-auto">
+                  <a href="#" target="_blank"
+                    ><i class="fas fa-book"></i> Wiki</a
+                  >
+                </div>
               </div>
             </div>
+            <div class="col-4 d-flex justify-content-center">
+              <img
+                src="assets/images/logo_mobile_noborder.png"
+                alt="Logo image"
+                width="230"
+                height="135"
+              />
+            </div>
+            <div class="col-4"></div>
           </div>
-          <div class="col-4 d-flex justify-content-center">
+          <div class="ribbon p-3 text-center fs-6 text-uppercase">
             <img
-              src="assets/images/logo_mobile_noborder.png"
-              alt="Logo image"
-              width="230"
-              height="135"
+              src="assets/images/landing/chest.png"
+              alt="Chest image"
+              width="48"
+              height="48"
             />
+            <p>Prêmio de novo jogador<br /><strong>Grátis!</strong></p>
           </div>
-          <div class="col-4"></div>
         </div>
-        <div class="ribbon p-3 text-center fs-6 text-uppercase">
-          <img
-            src="assets/images/landing/chest.png"
-            alt="Chest image"
-            width="48"
-            height="48"
-          />
-          <p>Prêmio de novo jogador<br /><strong>Grátis!</strong></p>
-        </div>
-      </div>
-    </nav>
-    <main class="home-bg">
-      <div class="container mb-5">
-        <div class="row">
-          <div class="col-md-7 d-flex align-items-stretch mb-3">
-            <div class="card bg-dark text-white">
-              <h5 class="card-header text-uppercase p-3">Bem vindo Herói!</h5>
-              <div class="card-body card-about">
-                <h5 class="card-title">
-                  Mana Storia é um RPG online gratuito de navegador.
+      </nav>
+      <main class="home-bg">
+        <div class="container mb-5">
+          <div class="row">
+            <div class="col-md-7 d-flex align-items-stretch mb-3">
+              <div class="card bg-dark text-white">
+                <h5 class="card-header text-uppercase p-3 fw-bold">
+                  Bem vindo Herói!
                 </h5>
-                <p class="card-text">
-                  Embarque numa jornada para explorar regiões até então
-                  desconhecidas. Enfrente e capture centenas de criaturas
-                  mágicas, encontre itens especiais para forjar novos
-                  equipamentos e junte-se a outros heróis em batalhas de raid
-                  épicas em tempo real! Desafie, também, o Chefe Mundial e
-                  avance nos andares da Torre Infinita para encontrar tesouros
-                  preciosos! Desvende as masmorras da Fenda e torne-se o herói
-                  mais poderoso que já existiu!
-                </p>
-                <small class="online">76 Heróis Online</small>
+                <div class="card-body card-about">
+                  <h5 class="card-title">
+                    Mana Storia é um RPG online gratuito de navegador.
+                  </h5>
+                  <p class="card-text">
+                    Embarque numa jornada para explorar regiões até então
+                    desconhecidas. Enfrente e capture centenas de criaturas
+                    mágicas, encontre itens especiais para forjar novos
+                    equipamentos e junte-se a outros heróis em batalhas de raid
+                    épicas em tempo real! Desafie, também, o Chefe Mundial e
+                    avance nos andares da Torre Infinita para encontrar tesouros
+                    preciosos! Desvende as masmorras da Fenda e torne-se o herói
+                    mais poderoso que já existiu!
+                  </p>
+                  <small class="online">76 Heróis Online</small>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-5 d-flex align-items-stretch mb-3">
-            <div class="card bg-dark text-white login">
-              <h5 class="card-header text-uppercase p-3">Jogue Agora!</h5>
-              <div class="card-body">
+            <div class="col-md-5 d-flex align-items-stretch mb-3">
+              <div class="card bg-dark text-white login w-100">
+                <h5 class="card-header text-uppercase p-3 fw-bold">
+                  Jogue Agora!
+                </h5>
                 <div
                   id="carouselExampleCaptions"
                   class="carousel slide carousel-fade"
@@ -154,102 +160,110 @@
                     </div>
                   </div>
                 </div>
-                <div class="text-center mt-3 px-3">
-                  <div class="d-grid gap-2 d-md-block">
-                    <button type="button" class="btn btn-success shadow-none">
-                      Login / Nova conta
-                    </button>
+                <div class="card-body">
+                  <div class="text-center mt-3 px-3">
+                    <div class="d-grid gap-2 d-md-block">
+                      <button type="button" class="btn btn-success shadow-none">
+                        Login / Nova conta
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div class="row justify-content-center mt-3">
-                  <div class="col-auto">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <img
-                        src="assets/images/landing/facebook.png"
-                        alt="Facebook image"
-                        width="24"
-                        height="24"
-                      />
-                    </a>
-                  </div>
-                  <div class="col-auto">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <img
-                        src="assets/images/landing/discord.png"
-                        alt="Facebook image"
-                        width="24"
-                        height="24"
-                      />
-                    </a>
+                  <div class="row justify-content-center mt-3">
+                    <div class="col-auto">
+                      <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img
+                          src="assets/images/landing/facebook.png"
+                          alt="Facebook image"
+                          width="24"
+                          height="24"
+                        />
+                      </a>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img
+                          src="assets/images/landing/discord.png"
+                          alt="Facebook image"
+                          width="24"
+                          height="24"
+                        />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-12 d-flex justify-content-end text-center">
-            <div class="row">
-              <div class="col-12">
-                <img
-                  src="assets/images/landing/download_android_pt.png"
-                  alt="Download pt image"
-                />
-              </div>
-              <div class="col-12">
-                <img
-                  src="assets/images/landing/download_android_en.png"
-                  alt="Download pt image"
-                />
+            <div class="col-12 d-flex justify-content-end text-center">
+              <div class="row">
+                <div class="col-12">
+                  <img
+                    src="assets/images/landing/download_android_pt.png"
+                    alt="Download pt image"
+                  />
+                </div>
+                <div class="col-12">
+                  <img
+                    src="assets/images/landing/download_android_en.png"
+                    alt="Download pt image"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    <footer class="footer mt-auto py-3 bg-white text-dark">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center">
-            <img
-              src="assets/images/landing/160x80_grey.png"
-              alt="Logo image"
-              width="75"
-            />
-            <small
-              >© Company Games <span class="year">2023</span>. Todos os direitos
-              reservados.</small
-            >
-          </div>
-          <div class="col-md-6">
-            <ul class="nav justify-content-center">
-              <li class="nav-item">
-                <a
-                  href="#"
-                  target="_blank"
-                  class="nav-link px-2 small text-muted"
-                  >Política de privacidade</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="#"
-                  target="_blank"
-                  class="nav-link px-2 small text-muted"
-                  >Termos de serviço</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="#"
-                  target="_blank"
-                  class="nav-link px-2 small text-muted"
-                  >Suporte</a
-                >
-              </li>
-            </ul>
+      </main>
+      <footer class="footer mt-auto py-3 bg-white text-dark">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+              <img
+                src="assets/images/landing/160x80_grey.png"
+                alt="Logo image"
+                width="75"
+              />
+              <small
+                >© Company Games <span class="year">2023</span>. Todos os
+                direitos reservados.</small
+              >
+            </div>
+            <div class="col-md-6">
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    target="_blank"
+                    class="nav-link px-2 small text-muted"
+                    >Política de privacidade</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    target="_blank"
+                    class="nav-link px-2 small text-muted"
+                    >Termos de serviço</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    target="_blank"
+                    class="nav-link px-2 small text-muted"
+                    >Suporte</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </section>
+    <section class="theme-dark text-white h-100">
+      <h1>Mobile</h1>
+    </section>
+    <div class="loader-wrapper" id="loader">
+      <img src="assets/images/icons/preloader_v2.webp" alt="Loading image" />
+    </div>
     <script src="assets/lib/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
     <script src="assets/lib/preloadjs/preloadjs.min.js"></script>
     <script src="assets/js/check.js"></script>

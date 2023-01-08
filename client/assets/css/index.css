@@ -85,6 +85,10 @@ a:hover {
   padding: 52px 0 35px 0;
 }
 
+.card {
+  border-radius: 6px;
+}
+
 .card-about {
   background-image: url('../images/landing/background_about.jpg');
   background-size: cover;
@@ -137,12 +141,32 @@ a:hover {
   box-shadow: inset -3px -3px 0px 0px #197e4c !important;
 }
 
-.login .card-body {
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .footer a:hover {
   color: #5c94e9 !important;
+}
+
+.theme-dark {
+  background-color: #2a2f34;
+}
+
+.loader-wrapper {
+  background: #111;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 1050;
+  overflow: hidden;
+}
+
+.loader-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 106px;
+  height: 70px;
 }

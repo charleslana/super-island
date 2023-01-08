@@ -332,21 +332,23 @@
       tabindex="-1"
       aria-labelledby="loginModalLabel"
       aria-hidden="true"
+      data-bs-keyboard="false"
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body mt-2">
-            <form>
+            <form id="loginForm">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"
                   ><i class="fa-solid fa-at"></i
                 ></span>
                 <input
-                  type="text"
+                  type="email"
                   class="form-control shadow-none"
                   placeholder="E-mail"
                   aria-label="E-mail"
                   aria-describedby="basic-addon1"
+                  required
                 />
               </div>
               <div class="input-group mb-3">
@@ -359,16 +361,17 @@
                   placeholder="Senha"
                   aria-label="Senha"
                   aria-describedby="basic-addon2"
+                  required
                 />
               </div>
-              <button type="button" class="btn btn-primary mb-3 w-100">
+              <button type="submit" class="btn btn-primary mb-3 w-100">
                 Login
               </button>
               <button type="button" class="btn btn-success mb-3 w-100">
                 Criar uma conta
               </button>
               <div class="text-center">
-                <a href="#">Esqueceu a senha?</a>
+                <a href="#" tabindex="-1">Esqueceu a senha?</a>
               </div>
             </form>
           </div>
@@ -376,6 +379,9 @@
       </div>
     </div>
     <div class="loader-wrapper" id="loader">
+      <img src="assets/images/icons/preloader_v2.webp" alt="Loader image" />
+    </div>
+    <div class="loading-wrapper" id="loading">
       <img src="assets/images/icons/preloader_v2.webp" alt="Loading image" />
     </div>
     <script src="assets/lib/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>

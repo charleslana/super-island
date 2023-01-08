@@ -6,6 +6,7 @@
 addEventListener('DOMContentLoaded', () => {
   changeYear();
   load();
+  handleLogin();
 });
 
 function changeYear() {
@@ -44,4 +45,26 @@ function handleComplete() {
   const body = document.getElementsByTagName('body')[0];
   document.getElementById('loader').style.display = 'none';
   body.classList.remove('overflow-hidden');
+}
+
+function handleLogin() {
+  document.getElementById('loginForm').addEventListener('submit', e => {
+    e.preventDefault();
+    loading();
+    setTimeout(() => {
+      removeLoading();
+    }, 1000);
+  });
+}
+
+function loading() {
+  const body = document.getElementsByTagName('body')[0];
+  body.classList.add('overflow-hidden');
+  document.getElementById('loading').style.display = 'block';
+}
+
+function removeLoading() {
+  const body = document.getElementsByTagName('body')[0];
+  body.classList.remove('overflow-hidden');
+  document.getElementById('loading').style.display = 'none';
 }

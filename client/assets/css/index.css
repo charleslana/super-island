@@ -183,11 +183,12 @@ a:hover {
   left: 0;
   top: 0;
   text-align: center;
-  z-index: 1050;
+  z-index: 1090;
   overflow: hidden;
 }
 
-.loader-wrapper img {
+.loader-wrapper img,
+.loading-wrapper img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -195,6 +196,19 @@ a:hover {
   -ms-transform: translate(-50%, -50%);
   width: 106px;
   height: 70px;
+}
+
+.loading-wrapper {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 1090;
+  overflow: hidden;
+  display: none;
 }
 
 .mobile {

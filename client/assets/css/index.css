@@ -198,6 +198,8 @@ a:hover {
   border-radius: 4px;
   padding: 2px;
   font-weight: 500;
+  position: relative;
+  z-index: 1;
 }
 
 .mobile .logo-mobile {
@@ -217,4 +219,18 @@ a:hover {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   font-family: 'Roboto', sans-serif;
+}
+
+.mobile .footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.mobile .footer strong {
+  font-size: 11px;
+}
+
+.mobile div:nth-child(2) {
+  padding-top: 1px;
+  padding-bottom: 1px;
 }

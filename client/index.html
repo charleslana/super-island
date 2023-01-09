@@ -278,11 +278,8 @@
         </div>
       </div>
     </footer>
-    <div
-      class="theme-dark text-white h-100 mobile d-md-none"
-      data-bs-toggle="modal"
-      data-bs-target="#loginModal"
-    >
+    <!-- Mobile -->
+    <div class="theme-dark text-white h-100 mobile d-md-none position-relative">
       <div class="container mt-2">
         <div class="server">
           <div class="d-flex align-items-center">
@@ -290,7 +287,28 @@
             <small class="fw-bold ms-1">Brazil</small>
           </div>
         </div>
+        <div
+          class="touch-me"
+          data-bs-toggle="modal"
+          data-bs-target="#loginModal"
+        ></div>
       </div>
+      <a href="#" class="hover-white">
+        <div
+          class="position-absolute top-0 end-0 pe-2 pt-2 z-1 d-inline-block max-w-icon"
+        >
+          <div class="p-icon news-icon m-auto"></div>
+          <p class="text-shadow text-truncate text-center">Notícias</p>
+        </div>
+      </a>
+      <a href="#" class="hover-white">
+        <div
+          class="position-absolute bottom-0 end-0 pe-2 pb-2 z-1 d-inline-block max-w-icon"
+        >
+          <div class="p-icon credits-icon m-auto"></div>
+          <p class="text-shadow text-truncate text-center">Créditos</p>
+        </div>
+      </a>
       <div
         class="start animate__animated animate__flash animate__infinite animate__slower"
       >
@@ -326,6 +344,7 @@
         </div>
       </footer>
     </div>
+    <!-- Login modal -->
     <div
       class="modal"
       id="loginModal"
@@ -348,6 +367,7 @@
                   placeholder="E-mail"
                   aria-label="E-mail"
                   aria-describedby="basic-addon1"
+                  id="email"
                   required
                 />
               </div>
@@ -361,23 +381,149 @@
                   placeholder="Senha"
                   aria-label="Senha"
                   aria-describedby="basic-addon2"
+                  id="password"
                   required
                 />
               </div>
               <button type="submit" class="btn btn-primary mb-3 w-100">
                 Login
               </button>
-              <button type="button" class="btn btn-success mb-3 w-100">
+              <button
+                type="button"
+                class="btn btn-success mb-3 w-100"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+              >
                 Criar uma conta
               </button>
               <div class="text-center">
-                <a href="#" tabindex="-1">Esqueceu a senha?</a>
+                <a
+                  href="#forgotPasswordModal"
+                  tabindex="-1"
+                  data-bs-toggle="modal"
+                  >Esqueceu a senha?</a
+                >
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+    <!-- Forgot password modal -->
+    <div
+      class="modal"
+      id="forgotPasswordModal"
+      tabindex="-1"
+      aria-labelledby="forgotPasswordModalLabel"
+      aria-hidden="true"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body mt-2">
+            <form id="forgotPasswordForm">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3"
+                  ><i class="fa-solid fa-at"></i
+                ></span>
+                <input
+                  type="email"
+                  class="form-control shadow-none"
+                  placeholder="E-mail"
+                  aria-label="E-mail"
+                  aria-describedby="basic-addon3"
+                  id="emailRecovery"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary mb-3 w-100">
+                Continuar
+              </button>
+              <div class="text-center">
+                <a href="#loginModal" tabindex="-1" data-bs-toggle="modal"
+                  >Voltar</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Register modal -->
+    <div
+      class="modal"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-hidden="true"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body mt-2">
+            <form id="registerForm">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon4"
+                  ><i class="fa-solid fa-at"></i
+                ></span>
+                <input
+                  type="email"
+                  class="form-control shadow-none"
+                  placeholder="E-mail"
+                  aria-label="E-mail"
+                  aria-describedby="basic-addon4"
+                  id="emailRegister"
+                  required
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon5"
+                  ><i class="fa-solid fa-lock"></i
+                ></span>
+                <input
+                  type="password"
+                  class="form-control shadow-none"
+                  placeholder="Senha"
+                  aria-label="Senha"
+                  aria-describedby="basic-addon5"
+                  id="passwordRegister"
+                  required
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon6"
+                  ><i class="fa-solid fa-lock"></i
+                ></span>
+                <input
+                  type="password"
+                  class="form-control shadow-none"
+                  placeholder="Repita a senha"
+                  aria-label="Repita a senha"
+                  aria-describedby="basic-addon6"
+                  id="passwordConfirmationRegister"
+                  required
+                />
+              </div>
+              <p class="text-center">
+                Tocando em Jogar, você concorda com nosso
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                  >Termos de serviço</a
+                >
+              </p>
+              <button type="submit" class="btn btn-success mb-3 w-100">
+                Jogar
+              </button>
+              <div class="text-center">
+                <a href="#loginModal" tabindex="-1" data-bs-toggle="modal"
+                  >Voltar</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Toast -->
     <div
       class="position-fixed top-0 start-50 translate-middle-x z-index-1065 pt-4"
     >
@@ -405,9 +551,14 @@
         </div>
       </div>
     </div>
+    <!-- Loader -->
     <div class="loader-wrapper" id="loader">
-      <img src="assets/images/icons/preloader_v2.webp" alt="Loader image" />
+      <div class="loader-content">
+        <img src="assets/images/icons/preloader_v2.webp" alt="Loader image" />
+        <p>Carregando dados...</p>
+      </div>
     </div>
+    <!-- Loading -->
     <div class="loading-wrapper" id="loading">
       <img src="assets/images/icons/preloader_v2.webp" alt="Loading image" />
     </div>

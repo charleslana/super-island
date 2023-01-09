@@ -149,7 +149,7 @@ a:hover {
 .btn-success,
 .btn-success:hover,
 .btn-success:focus {
-  background: #1ca863;
+  background-color: #1ca863 !important;
 }
 
 .btn-primary:active {
@@ -163,8 +163,9 @@ a:hover {
 
 .btn-primary,
 .btn-primary:hover,
-.btn-primary:focus {
-  background: #1977b6;
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #1977b6 !important;
 }
 
 .footer a:hover {
@@ -187,15 +188,23 @@ a:hover {
   overflow: hidden;
 }
 
-.loader-wrapper img,
-.loading-wrapper img {
+.loader-wrapper .loader-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  width: 106px;
+}
+
+.loader-wrapper img {
   height: 70px;
+}
+
+.loader-wrapper p {
+  font-size: 12px;
+  color: white;
+  margin-top: 5px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .loading-wrapper {
@@ -209,6 +218,16 @@ a:hover {
   z-index: 1090;
   overflow: hidden;
   display: none;
+}
+
+.loading-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 106px;
+  height: 70px;
 }
 
 .mobile {
@@ -316,6 +335,11 @@ a:hover {
   font-size: 11px;
 }
 
+.modal-content p {
+  color: #a5a6a8;
+  font-size: 11px;
+}
+
 .modal-content button {
   font-size: 16px;
 }
@@ -337,4 +361,54 @@ a:hover {
 .toast-body {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
+}
+
+.modal .btn {
+  padding: 0.3rem 1.5rem;
+}
+
+.touch-me {
+  height: calc(100vh - 103px);
+  background-color: transparent;
+  margin-top: 8px;
+  z-index: 1;
+  position: relative;
+}
+
+.text-shadow {
+  text-shadow: -1px 0 #202429, 0 1px #202429, 1px 0 #202429, 0 -1px #202429;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+.hover-white:hover {
+  color: white;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.p-icon {
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+}
+
+.p-icon:hover {
+  width: 52px;
+  height: 52px;
+}
+
+.max-w-icon {
+  width: 64px;
+}
+
+.news-icon {
+  background-image: url('../images/icons/news_default_2.png');
+}
+
+.credits-icon {
+  background-image: url('../images/icons/credits_default.png');
 }

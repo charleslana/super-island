@@ -7,6 +7,8 @@ addEventListener('DOMContentLoaded', () => {
   changeYear();
   load();
   handleLogin();
+  handleForgotPassword();
+  handleRegister();
 });
 
 function changeYear() {
@@ -19,8 +21,10 @@ function load() {
   body.classList.add('overflow-hidden');
   const queue = new createjs.LoadQueue(true);
   queue.loadManifest([
-    'assets/images/background/background_v3.png',
     'assets/images/icons/preloader_v2.webp',
+    'assets/images/background/background_v3.png',
+    'assets/images/icons/credits_default.png',
+    'assets/images/icons/news_default_2.png',
     'assets/images/landing/160x80_grey.png',
     'assets/images/landing/background_about.jpg',
     'assets/images/landing/background_desktop.png',
@@ -50,7 +54,26 @@ function handleComplete() {
 function handleLogin() {
   document.getElementById('loginForm').addEventListener('submit', e => {
     e.preventDefault();
-    toast('Preencha todos os campos');
+    loading();
+    const timeout = setTimeout(() => {
+      clearTimeout(timeout);
+      hideLoading();
+    }, 1000);
+  });
+}
+
+function handleForgotPassword() {
+  document
+    .getElementById('forgotPasswordForm')
+    .addEventListener('submit', e => {
+      e.preventDefault();
+      toast('Em breve');
+    });
+}
+
+function handleRegister() {
+  document.getElementById('registerForm').addEventListener('submit', e => {
+    e.preventDefault();
     loading();
     const timeout = setTimeout(() => {
       clearTimeout(timeout);

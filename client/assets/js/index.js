@@ -1,8 +1,3 @@
-// window.addEventListener('beforeunload', e => {
-//   e.preventDefault();
-//   e.returnValue = '';
-// });
-
 addEventListener('DOMContentLoaded', () => {
   changeYear();
   load();
@@ -57,7 +52,7 @@ function handleLogin() {
     loading();
     const timeout = setTimeout(() => {
       clearTimeout(timeout);
-      hideLoading();
+      redirectToGame();
     }, 1000);
   });
 }
@@ -80,4 +75,8 @@ function handleRegister() {
       hideLoading();
     }, 1000);
   });
+}
+
+function redirectToGame() {
+  window.location.href = 'game.html';
 }

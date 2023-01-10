@@ -22,3 +22,7 @@ function hideToast() {
   const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl);
   myToast.hide();
 }
+
+function numberFormatter(number) {
+  return number.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+}

@@ -1,4 +1,5 @@
 @import url('../css/common.css');
+@import url('../fonts/icomoon/icomoon.min.css');
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -10,4 +11,87 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  padding-top: 60px;
+}
+
+header .progress {
+  height: 4px;
+  background-color: #202a3b;
+  border-radius: 0;
+}
+
+header .progress-bar {
+  background-color: #1286d7;
+}
+
+header .navbar {
+  color: #a89f9f;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+header .navbar i {
+  font-size: 15px;
+}
+
+header .navbar i:first-child {
+  color: #6fb7fa;
+}
+
+header .navbar .name {
+  font-size: 14px;
+}
+
+.premium-nick {
+  -webkit-animation: premium-nick 1s ease-in-out infinite alternate;
+  -moz-animation: premium-nick 1s ease-in-out infinite alternate;
+  animation: premium-nick 1s ease-in-out infinite alternate;
+}
+
+@keyframes premium-nick {
+  from {
+    text-shadow: 0 0 2px #4d1c75, 0 0 2px #4d1c75, 0 0 2px#4d1c75,
+      0 0 2px #4d1c75, 0 0 2px#4d1c75, 0 0 2px #4d1c75;
+  }
+  to {
+    text-shadow: 0 0 2px #232a8f, 0 0 2px #232a8f, 0 0 2px #232a8f,
+      0 0 2px #232a8f, 0 0 2px #232a8f, 0 0 2px #232a8f;
+  }
+}
+
+header .navbar .user-bar {
+  width: 80px;
+  height: 23px;
+  background-color: #191c20;
+  border-radius: 5px;
+}
+
+header .navbar .user-bar .progress-bar {
+  background-color: transparent;
+  color: #a89f9f;
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+@media screen and (max-width: 576px) {
+  header .navbar * {
+    font-size: 11px !important;
+  }
+
+  header .navbar .progress {
+    width: 74px;
+  }
+  header .navbar .w-65px {
+    width: 65px;
+  }
+}
+
+.add-cash {
+  background-image: url('../images/icons/add_cash.png');
+  background-size: contain;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
 }

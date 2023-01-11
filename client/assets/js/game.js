@@ -5,6 +5,8 @@
 
 addEventListener('DOMContentLoaded', () => {
   load();
+  draggable();
+  tooltip();
 });
 
 function load() {
@@ -20,6 +22,7 @@ function load() {
     'assets/images/icons/add_cash.png',
     'assets/images/icons/news_feed_raid.png',
     'assets/images/avatars/hero_order.png',
+    'assets/images/background/home_order_v2.png',
   ]);
   queue.addEventListener('complete', handleComplete);
 }
@@ -28,4 +31,56 @@ function handleComplete() {
   const body = document.getElementsByTagName('body')[0];
   document.getElementById('loader').style.display = 'none';
   body.classList.remove('overflow-hidden');
+}
+
+function draggable() {
+  interact('.draggable').draggable({
+    inertia: true,
+    modifiers: [
+      interact.modifiers.restrictRect({
+        restriction: 'parent',
+        elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
+        endOnly: true,
+      }),
+    ],
+    listeners: {
+      move: dragMoveListener,
+      end(event) {
+        var textEl = event.target.querySelector('p');
+        textEl &&
+          (textEl.textContent =
+            'moved a distance of ' +
+            Math.sqrt(
+              (Math.pow(event.pageX - event.x0, 2) +
+                Math.pow(event.pageY - event.y0, 2)) |
+                0
+            ).toFixed(2) +
+            'px');
+      },
+    },
+  });
+
+  function dragMoveListener(event) {
+    var target = event.target;
+    var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+    var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+    if (window.innerWidth < 1312) {
+      target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+      target.setAttribute('data-x', x);
+      target.setAttribute('data-y', y);
+    }
+  }
+  window.dragMoveListener = dragMoveListener;
+}
+
+function tooltip() {
+  const tooltipTriggerList = [].slice.call(
+    document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  );
+  tooltipTriggerList.map(tooltipTriggerEl => {
+    return new bootstrap.Tooltip(tooltipTriggerEl, {
+      html: true,
+      delay: { show: 250, hide: 100 },
+    });
+  });
 }

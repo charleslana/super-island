@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
     <meta
       name="description"
       content="Mana Storia is an online RPG browser game for PC and mobile. Play for free right now!"
@@ -59,7 +62,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar fixed-top navbar-dark bg-dark p-0">
+      <nav class="navbar fixed-top navbar-dark bg-dark p-0 vw-100">
         <div class="progress w-100">
           <div
             class="progress-bar"
@@ -99,6 +102,9 @@
           <div class="d-flex">
             <div
               class="progress user-bar align-items-center justify-content-between p-1 me-1"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Carne"
             >
               <div
                 class="progress-bar flex-row"
@@ -117,6 +123,9 @@
             </div>
             <div
               class="progress user-bar align-items-center justify-content-between p-1 me-1"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Ouro"
             >
               <div
                 class="progress-bar flex-row"
@@ -135,6 +144,9 @@
             </div>
             <div
               class="progress user-bar align-items-center justify-content-between p-1"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Diamante"
             >
               <div
                 class="progress-bar flex-row"
@@ -156,27 +168,9 @@
         </div>
       </nav>
     </header>
-    <h1>Hello world 1</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
+    <main>
+      <div class="main-home draggable"></div>
+    </main>
     <!-- Loader -->
     <div class="loader-wrapper" id="loader">
       <div class="loader-content">
@@ -190,6 +184,7 @@
     </div>
     <script src="assets/lib/bootstrap@5.2.3/js/bootstrap.bundle.min.js"></script>
     <script src="assets/lib/preloadjs/preloadjs.min.js"></script>
+    <script src="assets/lib/interactjs/interact.min.js"></script>
     <script src="assets/js/check.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/game.js"></script>

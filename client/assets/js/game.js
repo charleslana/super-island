@@ -23,6 +23,8 @@ function load() {
     'assets/images/icons/add_cash.png',
     'assets/images/icons/news_feed_raid.png',
     'assets/images/icons/news_feed.png',
+    'assets/images/icons/exp.png',
+    'assets/images/icons/exp_vocation.png',
     'assets/images/avatars/hero_order.png',
     'assets/images/background/home_order_v2.png',
     'assets/images/footer/bag_default.png',
@@ -98,6 +100,15 @@ function feedNewsBox() {
   box.classList.add('animate__fadeIn');
   const interval = setInterval(() => {
     box.classList.add('animate__fadeOut');
+    box.addEventListener('animationend', () => {
+      box.style.setProperty('display', 'none', 'important');
+    });
     clearInterval(interval);
   }, 15000);
+  box.addEventListener('click', () => {
+    box.classList.add('animate__fadeOut');
+    box.addEventListener('animationend', () => {
+      box.style.setProperty('display', 'none', 'important');
+    });
+  });
 }

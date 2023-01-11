@@ -217,7 +217,7 @@ footer .navbar [id] > div > span {
   width: 100%;
   height: 24px;
   position: absolute;
-  z-index: 1089;
+  z-index: 1080;
   text-align: center;
   top: 60px;
   padding-left: 20px;
@@ -253,4 +253,38 @@ footer .navbar [id] > div > span {
 
 .color-red-2 {
   color: #e65b54;
+}
+
+.bonus-box {
+  width: 100%;
+  height: 23px;
+  position: absolute;
+  z-index: 1080;
+  text-align: center;
+  top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.bonus {
+  width: 150px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+
+.bonus .progress {
+  width: 20px;
+  height: 2px;
+  outline: 1px solid #4d494d;
+  background: #797979;
+  border-radius: 0;
+}
+
+.bonus .progress .progress-bar {
+  background: #cda720;
+  box-shadow: inset 0 3px 0 -1px #f3cf50, inset 0 -3px 0 -2px #4d494d,
+    inset 3px 0 0 -2px #4d494d, inset -3px 0 0 -2px #4d494d;
 }

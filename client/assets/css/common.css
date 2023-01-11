@@ -236,26 +236,3 @@
 .z-1 {
   z-index: 1;
 }
-
-.p-icon {
-  background-size: contain;
-  width: 48px;
-  height: 48px;
-}
-
-.p-icon:hover {
-  width: 52px;
-  height: 52px;
-}
-
-.max-w-icon {
-  width: 64px;
-}
-
-.news-icon {
-  background-image: url('../images/icons/news_default_2.png');
-}
-
-.credits-icon {
-  background-image: url('../images/icons/credits_default.png');
-}

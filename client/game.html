@@ -58,6 +58,10 @@
       href="assets/lib/bootstrap@5.2.3/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="assets/lib/animate.css/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/lib/fontawesome-free-6.2.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="assets/css/game.css" />
   </head>
   <body>
@@ -171,6 +175,103 @@
     <main>
       <div class="main-home draggable"></div>
     </main>
+    <footer>
+      <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <div class="container-fluid d-flex justify-content-around">
+          <div class="d-flex flex-column align-items-center" id="worldMap">
+            <div class="world-map position-relative">
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle visually-hidden"
+              >
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </div>
+            <div
+              class="d-inline-block max-w-icon text-center text-truncate m-t-n-icon"
+            >
+              <span class="max-w-icon">Mundo</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-center" id="townMap">
+            <div class="town-map position-relative">
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle visually-hidden"
+              >
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </div>
+            <div
+              class="d-inline-block max-w-icon text-center text-truncate m-t-n-icon"
+            >
+              <span class="max-w-icon">Cidade</span>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-column align-items-center active"
+            id="homeMap"
+          >
+            <div class="home-map position-relative">
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"
+              >
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </div>
+            <div
+              class="d-inline-block max-w-icon text-center text-truncate m-t-n-icon"
+            >
+              <span class="max-w-icon">Casa</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-center" id="hero">
+            <div class="hero position-relative">
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle visually-hidden"
+              >
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </div>
+            <div
+              class="d-inline-block max-w-icon text-center text-truncate m-t-n-icon"
+            >
+              <span class="max-w-icon">Herói</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-center" id="bag">
+            <div class="bag position-relative">
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle visually-hidden"
+              >
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </div>
+            <div
+              class="d-inline-block max-w-icon text-center text-truncate m-t-n-icon"
+            >
+              <span class="max-w-icon">Mochila</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <!-- News feed -->
+    <div
+      id="newFeedBox"
+      class="news-feed-box d-flex justify-content-center animate__animated animate__fadeOut"
+    >
+      <div class="news-feed d-flex align-items-center position-relative">
+        <marquee scrolldelay="140" hspace="0px"
+          >O item <span class="color-yellow">Espada Yoru (Mistica)</span> foi
+          encontrado pelo jogador
+          <span class="color-yellow-2">user</span></marquee
+        >
+        <img
+          src="assets/images/icons/news_feed.png"
+          alt="News feed image"
+          height="28"
+        />
+      </div>
+    </div>
     <!-- Loader -->
     <div class="loader-wrapper" id="loader">
       <div class="loader-content">

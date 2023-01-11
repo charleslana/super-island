@@ -7,6 +7,7 @@ addEventListener('DOMContentLoaded', () => {
   load();
   draggable();
   tooltip();
+  feedNewsBox();
 });
 
 function load() {
@@ -21,8 +22,14 @@ function load() {
     'assets/images/icons/diamond.png',
     'assets/images/icons/add_cash.png',
     'assets/images/icons/news_feed_raid.png',
+    'assets/images/icons/news_feed.png',
     'assets/images/avatars/hero_order.png',
     'assets/images/background/home_order_v2.png',
+    'assets/images/footer/bag_default.png',
+    'assets/images/footer/character_default.png',
+    'assets/images/footer/home_default.png',
+    'assets/images/footer/town_default.png',
+    'assets/images/footer/worldmap_default.png',
   ]);
   queue.addEventListener('complete', handleComplete);
 }
@@ -83,4 +90,14 @@ function tooltip() {
       delay: { show: 250, hide: 100 },
     });
   });
+}
+
+function feedNewsBox() {
+  const box = document.getElementById('newFeedBox');
+  box.classList.remove('animate__fadeOut');
+  box.classList.add('animate__fadeIn');
+  const interval = setInterval(() => {
+    box.classList.add('animate__fadeOut');
+    clearInterval(interval);
+  }, 15000);
 }

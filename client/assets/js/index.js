@@ -47,11 +47,16 @@ function handleComplete() {
 }
 
 function handleLogin() {
+  const logged = localStorage.getItem('logged');
+  if (logged === 'true') {
+    redirectToGame();
+  }
   document.getElementById('loginForm').addEventListener('submit', e => {
     e.preventDefault();
     loading();
     const timeout = setTimeout(() => {
       clearTimeout(timeout);
+      localStorage.setItem('logged', true);
       redirectToGame();
     }, 1000);
   });

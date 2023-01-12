@@ -5,11 +5,13 @@
 
 addEventListener('DOMContentLoaded', () => {
   load();
+  checkLogged();
   draggable();
   tooltip();
   feedNewsBox();
   chestAFK();
   checkInternet();
+  logout();
 });
 
 function load() {
@@ -146,4 +148,38 @@ function chestAFK() {
     chest.classList.remove('animate__infinite');
     spin.style.pointerEvents = 'none';
   });
+}
+
+function checkBrowserTabs() {
+  const tabCount = +localStorage.getItem('tabCount');
+  window.addEventListener('storage', storageChanged, false);
+  localStorage.setItem('tabCount', tabCount + 1);
+  function storageChanged(event) {
+    if (event.newValue <= tabCount) {
+      window.location.href = 'about:blank';
+      return;
+    }
+    localStorage.setItem('tabCount', tabCount + 1);
+  }
+}
+
+function logout() {
+  document.getElementById('userLogged').addEventListener('click', () => {
+    removeSession();
+  });
+}
+
+function checkLogged() {
+  const logged = localStorage.getItem('logged');
+  if (logged === null || logged === 'false') {
+    removeSession();
+    return;
+  }
+  checkBrowserTabs();
+}
+
+function removeSession() {
+  localStorage.removeItem('tabCount');
+  localStorage.removeItem('logged');
+  window.location.href = 'index.html';
 }

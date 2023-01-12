@@ -269,11 +269,12 @@ footer .navbar [id] > div > span {
   width: 100%;
   height: 23px;
   position: absolute;
-  z-index: 1080;
+  z-index: 1;
   text-align: center;
   top: 60px;
   padding-left: 20px;
   padding-right: 20px;
+  pointer-events: none;
 }
 
 .bonus {
@@ -420,7 +421,7 @@ main [id] .badge > span {
 
 .chest-afk {
   cursor: pointer;
-  background-image: url('../images/menus/reward_bg.png');
+  background-image: url('../images/menu/reward_bg.png');
   background-size: cover;
   width: 250px;
   height: 250px;
@@ -548,4 +549,109 @@ main [id] .badge > span {
 
 #userLogged {
   cursor: pointer;
+}
+
+.float-menu {
+  position: fixed;
+  top: 64px;
+  z-index: 2;
+}
+
+.float-menu > div:nth-child(2) {
+  margin-left: 65px;
+}
+
+.float-menu > div:nth-child(3) {
+  margin-left: 130px;
+}
+
+.float-menu-left {
+  width: 60px;
+  position: fixed;
+  top: 64px;
+  left: 5px;
+}
+
+.float-menu-left .text {
+  font-size: 13px;
+  color: white;
+  font-weight: 600;
+  text-shadow: -1px 0 #202429, 0 1px #202429, 1px 0 #202429, 0 -1px #202429;
+  text-align: center;
+  line-height: 11px;
+  width: 60px;
+}
+
+.float-menu-left span {
+  padding: 4px !important;
+  top: 5px !important;
+}
+
+.float-menu-left [id] {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+
+.float-menu-left [id]:hover > div:first-child {
+  transform: scale(1.1);
+}
+
+.float-menu-hunt {
+  background-image: url('../images/menu/hunting_default.png');
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.float-menu-task {
+  background-image: url('../images/menu/tasks_default.png');
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.float-menu-rewards {
+  background-image: url('../images/menu/rewards_v2.png');
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.float-menu-shop {
+  background-image: url('../images/menu/shop_default.png');
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.float-menu-wheel {
+  background-image: url('../images/menu/wheel_default.png');
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.float-menu-rank {
+  background-image: url('../images/menu/rank_v2.png');
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.float-menu-challenge {
+  background-image: url('../images/menu/challenge_default.png');
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.float-menu-events {
+  background-image: url('../images/menu/events_default.png');
+  background-size: contain;
+  width: 50px;
+  height: 50px;
 }

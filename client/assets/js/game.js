@@ -131,6 +131,16 @@ function tooltip() {
   });
 }
 
+function hideTooltip() {
+  const tooltips = [].slice.call(
+    document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  );
+  tooltips.forEach(tooltip => {
+    const instance = bootstrap.Tooltip.getInstance(tooltip);
+    instance.hide();
+  });
+}
+
 function feedNewsBox() {
   const box = document.getElementById('newFeedBox');
   box.classList.remove('animate__fadeOut');

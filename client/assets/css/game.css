@@ -572,7 +572,14 @@ main [id] .badge > span {
   left: 5px;
 }
 
-.float-menu-left .text {
+.float-menu-right {
+  position: fixed;
+  top: 64px;
+  right: 5px;
+}
+
+.float-menu-left .text,
+.float-menu-right .text {
   font-size: 13px;
   color: white;
   font-weight: 600;
@@ -582,12 +589,14 @@ main [id] .badge > span {
   width: 60px;
 }
 
-.float-menu-left span {
+.float-menu-left span,
+.float-menu-right span {
   padding: 4px !important;
   top: 5px !important;
 }
 
-.float-menu-left [id] {
+.float-menu-left [id],
+.float-menu-right [id] {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -596,7 +605,8 @@ main [id] .badge > span {
   height: 60px;
 }
 
-.float-menu-left [id]:hover > div:first-child {
+.float-menu-left [id]:hover > div:first-child,
+.float-menu-right [id]:hover > div:first-child {
   transform: scale(1.1);
 }
 
@@ -651,6 +661,27 @@ main [id] .badge > span {
 
 .float-menu-events {
   background-image: url('../images/menu/events_default.png');
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.float-menu-news {
+  background-image: url('../images/menu/news_default.png');
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.float-menu-help {
+  background-image: url('../images/menu/help_default.png');
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.float-menu-walkthrough {
+  background-image: url('../images/menu/walkthrough_default_2.png');
   background-size: contain;
   width: 50px;
   height: 50px;

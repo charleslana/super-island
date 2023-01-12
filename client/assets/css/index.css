@@ -151,13 +151,12 @@ a:hover {
   height: 48px;
 }
 
-.p-icon:hover {
-  width: 52px;
-  height: 52px;
-}
-
 .max-w-icon {
   width: 64px;
+}
+
+.max-w-icon:hover > div:first-child {
+  transform: scale(1.1);
 }
 
 .news-icon {

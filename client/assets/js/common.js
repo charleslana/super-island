@@ -27,16 +27,6 @@ function numberFormatter(number) {
   return number.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
 }
 
-function hideTooltip() {
-  const tooltips = [].slice.call(
-    document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  );
-  tooltips.forEach(tooltip => {
-    const instance = bootstrap.Tooltip.getInstance(tooltip);
-    instance.hide();
-  });
-}
-
 function checkInternet() {
   const failed = document.getElementById('failedInternet');
   const success = document.getElementById('successInternet');

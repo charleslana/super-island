@@ -8,6 +8,8 @@ addEventListener('DOMContentLoaded', () => {
   draggable();
   tooltip();
   feedNewsBox();
+  chestAFK();
+  checkInternet();
 });
 
 function load() {
@@ -25,6 +27,8 @@ function load() {
     'assets/images/icons/news_feed.png',
     'assets/images/icons/exp.png',
     'assets/images/icons/exp_vocation.png',
+    'assets/images/icons/quest_progress.png',
+    'assets/images/icons/quest.png',
     'assets/images/avatars/hero_order.png',
     'assets/images/background/home_order_v2.png',
     'assets/images/footer/bag_default.png',
@@ -32,6 +36,24 @@ function load() {
     'assets/images/footer/home_default.png',
     'assets/images/footer/town_default.png',
     'assets/images/footer/worldmap_default.png',
+    'assets/images/map/mystery_chest_closed.gif',
+    'assets/images/boats/01.gif',
+    'assets/images/boats/02.gif',
+    'assets/images/boats/03.gif',
+    'assets/images/boats/04.gif',
+    'assets/images/boats/05.gif',
+    'assets/images/boats/06.gif',
+    'assets/images/boats/07.gif',
+    'assets/images/boats/08.gif',
+    'assets/images/boats/09.gif',
+    'assets/images/boats/10.gif',
+    'assets/images/boats/11.gif',
+    'assets/images/boats/12.gif',
+    'assets/images/boats/13.gif',
+    'assets/images/menus/reward_bg.png',
+    'assets/images/npc/01.gif',
+    'assets/images/npc/02.gif',
+    'assets/images/characters/01.gif',
   ]);
   queue.addEventListener('complete', handleComplete);
 }
@@ -70,6 +92,7 @@ function draggable() {
   });
 
   function dragMoveListener(event) {
+    hideTooltip();
     var target = event.target;
     var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
     var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
@@ -110,5 +133,17 @@ function feedNewsBox() {
     box.addEventListener('animationend', () => {
       box.style.setProperty('display', 'none', 'important');
     });
+  });
+}
+
+function chestAFK() {
+  const chest = document.getElementById('chestAFK');
+  const spin = document.getElementById('chestAFKSpin');
+  spin.addEventListener('click', () => {
+    spin.classList.remove('spin');
+    spin.classList.add('animate__fadeOut');
+    chest.classList.add('animate__fadeOut');
+    chest.classList.remove('animate__infinite');
+    spin.style.pointerEvents = 'none';
   });
 }

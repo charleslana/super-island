@@ -15,6 +15,7 @@ addEventListener('DOMContentLoaded', async () => {
   floatMenu();
   await getHome();
   footerMenu();
+  questToggle();
 });
 
 function load() {
@@ -330,4 +331,24 @@ function footerMenu() {
 
 async function getTown() {
   await loaderHTML('town');
+}
+
+function questToggle() {
+  document.getElementById('questToggle').addEventListener('click', () => {
+    const questBox = document.getElementById('questBox');
+    const questToggleIcon = document.getElementById('questToggleIcon');
+    if (questToggleIcon.getAttribute('quest-toggle-icon') === 'hide') {
+      questToggleIcon.classList.remove('fa-angle-right');
+      questToggleIcon.classList.add('fa-angle-left');
+      questToggleIcon.removeAttribute('quest-toggle-icon');
+      questBox.classList.remove('animate__slideOutLeft');
+      questBox.classList.add('animate__slideInLeft');
+      return;
+    }
+    questToggleIcon.classList.remove('fa-angle-left');
+    questToggleIcon.classList.add('fa-angle-right');
+    questToggleIcon.setAttribute('quest-toggle-icon', 'hide');
+    questBox.classList.remove('animate__slideInLeft');
+    questBox.classList.add('animate__slideOutLeft');
+  });
 }

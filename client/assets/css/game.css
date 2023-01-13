@@ -731,8 +731,6 @@ main [id] .badge > span {
 
 .float-menu-show span {
   padding: 4px;
-  right: -9px !important;
-  bottom: -7px !important;
 }
 
 .quest-toggle {
@@ -775,4 +773,104 @@ main [id] .badge > span {
   word-wrap: break-word;
   font-size: 11px;
   color: white;
+}
+
+.left-menu-bar {
+  background: #202429;
+  position: fixed;
+  width: 30px;
+  height: 57px;
+  bottom: 90px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 25px;
+  border-radius: 0 5px 5px 0;
+}
+
+.left-menu-bar span {
+  padding: 4px;
+}
+
+.left-menu-expanded-bar {
+  background: #202429;
+  position: fixed;
+  width: 325px;
+  height: 57px;
+  bottom: 90px;
+  border-radius: 0 5px 5px 0;
+  padding: 5px;
+}
+
+.left-menu-expanded-bar i {
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.left-menu-expanded-bar #leftMenuBarHide {
+  height: 45px;
+}
+
+.left-menu-expanded-bar .text {
+  color: #a5a6a8;
+  font-weight: 600;
+  font-size: 10px;
+  width: 40px;
+  text-align: center;
+  line-height: 10px;
+}
+
+.left-menu-expanded-bar > div {
+  border-left: 1px solid #24282e;
+  border-right: 1px solid #1d2125;
+  cursor: pointer;
+}
+
+.left-menu-expanded-bar [id]:hover > div:first-child {
+  transform: scale(1.1);
+}
+
+.left-menu-expanded-bar [id] span {
+  padding: 4px;
+}
+
+.float-left-menu-mail {
+  background-image: url('../images/left-menu/mail_default.png');
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.float-left-menu-trade {
+  background-image: url('../images/left-menu/trade_default.png');
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.float-left-menu-friends {
+  background-image: url('../images/left-menu/friends_default.png');
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.float-left-menu-guilds {
+  background-image: url('../images/left-menu/guilds_default.png');
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.float-left-menu-achievements {
+  background-image: url('../images/left-menu/achievements_default.png');
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.float-left-menu-index {
+  background-image: url('../images/left-menu/index_default.png');
+  background-size: contain;
+  width: 40px;
+  height: 40px;
 }

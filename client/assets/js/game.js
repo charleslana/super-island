@@ -4,7 +4,7 @@
 // });
 
 addEventListener('DOMContentLoaded', async () => {
-  load();
+  // load();
   checkLogged();
   draggable();
   tooltip();
@@ -16,6 +16,7 @@ addEventListener('DOMContentLoaded', async () => {
   await getHome();
   footerMenu();
   questToggle();
+  menuLeftToggle();
 });
 
 function load() {
@@ -73,6 +74,12 @@ function load() {
     'assets/images/npc/01.gif',
     'assets/images/npc/02.gif',
     'assets/images/characters/01.gif',
+    'assets/images/left-menu/achievements_default.png',
+    'assets/images/left-menu/friends_default.png',
+    'assets/images/left-menu/guilds_default.png',
+    'assets/images/left-menu/index_default.png',
+    'assets/images/left-menu/mail_default.png',
+    'assets/images/left-menu/trade_default.png',
   ]);
   queue.addEventListener('complete', handleComplete);
 }
@@ -350,5 +357,19 @@ function questToggle() {
     questToggleIcon.setAttribute('quest-toggle-icon', 'hide');
     questBox.classList.remove('animate__slideInLeft');
     questBox.classList.add('animate__slideOutLeft');
+  });
+}
+
+function menuLeftToggle() {
+  const show = document.getElementById('leftMenuBarShow');
+  const hide = document.getElementById('leftMenuBarHide');
+  const menu = document.getElementById('menuLeftExpandedBar');
+  show.addEventListener('click', () => {
+    menu.classList.remove('animate__slideOutLeft');
+    menu.classList.add('animate__slideInLeft');
+  });
+  hide.addEventListener('click', () => {
+    menu.classList.remove('animate__slideInLeft');
+    menu.classList.add('animate__slideOutLeft');
   });
 }

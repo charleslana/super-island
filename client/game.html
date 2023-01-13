@@ -451,7 +451,7 @@
       style="display: none !important"
     >
       <span
-        class="position-absolute bottom-0 end-0 translate-middle bg-danger border border-light rounded-circle"
+        class="position-absolute bottom-0 end-0 bg-danger border border-light rounded-circle"
       >
       </span>
       <i class="fa-solid fa-angle-down"></i>
@@ -474,6 +474,69 @@
         <span>Cace alguns <span class="color-yellow">Rabicutes</span> em</span>
         <br />
         <span class="color-green-3">Grassy Plains (0/15)</span>
+      </div>
+    </div>
+    <!-- Left menu bar -->
+    <div
+      class="left-menu-bar d-flex justify-content-center align-items-center"
+      id="leftMenuBarShow"
+    >
+      <span
+        class="position-absolute top-0 end-0 bg-danger border border-light rounded-circle"
+      >
+      </span>
+      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <div
+      class="left-menu-expanded-bar d-flex justify-content-start align-items-center animate__animated animate__faster animate__slideOutLeft"
+      id="menuLeftExpandedBar"
+    >
+      <div class="d-flex flex-column align-items-center me-2" id="menuLeftMail">
+        <div class="float-left-menu-mail position-relative">
+          <span
+            class="position-absolute top-0 end-0 bg-danger border border-light rounded-circle"
+          >
+          </span>
+        </div>
+        <div class="text text-truncate">Correio</div>
+      </div>
+      <div
+        class="d-flex flex-column align-items-center me-2"
+        id="menuLeftTrade"
+      >
+        <div class="float-left-menu-trade position-relative"></div>
+        <div class="text text-truncate">Trocas</div>
+      </div>
+      <div
+        class="d-flex flex-column align-items-center me-2"
+        id="menuLeftFriend"
+      >
+        <div class="float-left-menu-friends position-relative"></div>
+        <div class="text text-truncate">Amigos</div>
+      </div>
+      <div
+        class="d-flex flex-column align-items-center me-2"
+        id="menuLeftGuild"
+      >
+        <div class="float-left-menu-guilds position-relative"></div>
+        <div class="text text-truncate">Guilda</div>
+      </div>
+      <div
+        class="d-flex flex-column align-items-center me-2"
+        id="menuLeftAchievements"
+      >
+        <div class="float-left-menu-achievements position-relative"></div>
+        <div class="text text-truncate">Triunfos</div>
+      </div>
+      <div
+        class="d-flex flex-column align-items-center me-1"
+        id="menuLeftIndex"
+      >
+        <div class="float-left-menu-index position-relative"></div>
+        <div class="text text-truncate">Índice</div>
+      </div>
+      <div class="d-flex align-items-center" id="leftMenuBarHide">
+        <i class="fa-solid fa-angle-left"></i>
       </div>
     </div>
     <!-- Menu footer -->
@@ -629,12 +692,12 @@
       <img src="assets/images/icons/preloader_v2.webp" alt="Loading image" />
     </div>
     <!-- Loader -->
-    <div class="loader-wrapper" id="loader">
+    <!-- <div class="loader-wrapper" id="loader">
       <div class="loader-content">
         <img src="assets/images/icons/preloader_v2.webp" alt="Loader image" />
         <p>Carregando dados...</p>
       </div>
-    </div>
+    </div> -->
     <!-- Check internet -->
     <div class="internet-wrapper" id="failedInternet">
       <div class="failed-internet animate__animated animate__slideInDown">

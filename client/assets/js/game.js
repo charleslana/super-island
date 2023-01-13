@@ -4,7 +4,7 @@
 // });
 
 addEventListener('DOMContentLoaded', async () => {
-  // load();
+  load();
   checkLogged();
   draggable();
   tooltip();

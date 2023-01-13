@@ -696,7 +696,7 @@ main [id] .badge > span {
   top: 273px;
   left: 38px;
   width: 52px;
-  background-color: #202429;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   z-index: 3;
   font-weight: 900;
@@ -709,7 +709,7 @@ main [id] .badge > span {
   top: 60px;
   left: 38px;
   width: 52px;
-  background-color: #202429;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   z-index: 3;
   font-weight: 900;
@@ -721,4 +721,23 @@ main [id] .badge > span {
   padding: 4px;
   right: -9px !important;
   bottom: -7px !important;
+}
+
+.quest-toggle {
+  top: 321px;
+  left: 6px;
+  position: fixed;
+  width: 25px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 330px) {
+  .w-65px {
+    display: none !important;
+  }
 }

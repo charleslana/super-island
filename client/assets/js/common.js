@@ -22,30 +22,3 @@ function hideToast() {
   const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl);
   myToast.hide();
 }
-
-function numberFormatter(number) {
-  return number.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
-}
-
-function checkInternet() {
-  const failed = document.getElementById('failedInternet');
-  const success = document.getElementById('successInternet');
-  const child = success.firstElementChild;
-  window.addEventListener('offline', () => {
-    failed.style.display = 'block';
-    child.classList.add('animate__slideInDown');
-    child.classList.remove('animate__fadeOut');
-  });
-  window.addEventListener('online', () => {
-    failed.style.display = 'none';
-    success.style.display = 'block';
-    child.addEventListener('animationend', () => {
-      child.classList.remove('animate__slideInDown');
-      child.classList.add('animate__fadeOut');
-      const interval = setInterval(() => {
-        clearInterval(interval);
-        success.style.display = 'none';
-      }, 1000);
-    });
-  });
-}

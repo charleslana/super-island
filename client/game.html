@@ -122,7 +122,8 @@
               class="progress user-bar align-items-center justify-content-between p-1 me-1"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
-              title="Carne"
+              title="Carne <br>4900/100"
+              id="staminaTooltip"
             >
               <div
                 class="progress-bar flex-row"
@@ -137,7 +138,11 @@
                   height="18"
                 />
               </div>
-              <div><span>4990</span>/<span>100</span></div>
+              <div>
+                <span id="minStamina">4990</span>/<span id="maxStamina"
+                  >100</span
+                >
+              </div>
             </div>
             <div
               class="progress user-bar align-items-center justify-content-between p-1 me-1"
@@ -433,7 +438,7 @@
         <div class="text text-truncate premium-nick">Fortalecer</div>
       </div>
     </div>
-    <!-- Toggle menu float -->
+    <!-- Menu float toggle -->
     <div
       class="float-menu-hide d-flex justify-content-center animate__animated"
       id="floatMenuHide"
@@ -450,6 +455,10 @@
       >
       </span>
       <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <!-- Quest toggle -->
+    <div class="quest-toggle d-flex align-items-center justify-content-center">
+      <i class="fa-solid fa-angle-left"></i>
     </div>
     <!-- Menu footer -->
     <footer>

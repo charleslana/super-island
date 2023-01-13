@@ -145,6 +145,46 @@ function hideTooltip() {
   });
 }
 
+function updateTooltip(id, title) {
+  const element = document.getElementById(id);
+  element.title = title;
+  tooltip();
+}
+
+function numberFormatter(number) {
+  return number.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+}
+
+function checkInternet() {
+  const failed = document.getElementById('failedInternet');
+  const success = document.getElementById('successInternet');
+  const child = success.firstElementChild;
+  window.addEventListener('offline', () => {
+    failed.style.display = 'block';
+    child.classList.add('animate__slideInDown');
+    child.classList.remove('animate__fadeOut');
+  });
+  window.addEventListener('online', () => {
+    failed.style.display = 'none';
+    success.style.display = 'block';
+    child.addEventListener('animationend', () => {
+      child.classList.remove('animate__slideInDown');
+      child.classList.add('animate__fadeOut');
+      const interval = setInterval(() => {
+        clearInterval(interval);
+        success.style.display = 'none';
+      }, 1000);
+    });
+  });
+}
+
+function abbreviateNumber(number) {
+  return Intl.NumberFormat('en-US', {
+    notation: 'compact',
+    maximumFractionDigits: 1,
+  }).format(number);
+}
+
 function feedNewsBox() {
   const box = document.getElementById('newsFeedBox');
   box.classList.remove('animate__fadeOut');
@@ -270,12 +310,14 @@ async function getHome() {
   await loaderHTML('home').then(() => {
     draggable();
     tooltip();
+    document.getElementById('minStamina').textContent = abbreviateNumber(4900);
+    document.getElementById('maxStamina').textContent = abbreviateNumber(100);
+    updateTooltip('staminaTooltip', `Carne<br>${numberFormatter(4900)}/100`);
   });
 }
 
 function footerMenu() {
   const page = document.getElementById('root').getAttribute('data-page');
-  console.log(page);
   document.getElementById('homeMap').addEventListener('click', () => {
     if (page !== 'home') {
       getHome();

@@ -3,7 +3,7 @@
 //   e.returnValue = '';
 // });
 
-addEventListener('DOMContentLoaded', () => {
+addEventListener('DOMContentLoaded', async () => {
   load();
   checkLogged();
   draggable();
@@ -13,6 +13,8 @@ addEventListener('DOMContentLoaded', () => {
   checkInternet();
   logout();
   floatMenu();
+  await getHome();
+  footerMenu();
 });
 
 function load() {
@@ -245,4 +247,45 @@ function floatMenu() {
   if (menuStorage === 'hide') {
     menuHide.click();
   }
+}
+
+async function loaderHTML(page) {
+  loading();
+  await axios
+    .get(`pages/${page}.html`, { responseType: 'text' })
+    .then(function (response) {
+      const root = document.getElementById('root');
+      root.innerHTML = response.data;
+      root.dataset.page = page;
+    })
+    .catch(function (error) {
+      toast(error.message);
+    })
+    .finally(() => {
+      hideLoading();
+    });
+}
+
+async function getHome() {
+  await loaderHTML('home').then(() => {
+    draggable();
+    tooltip();
+  });
+}
+
+function footerMenu() {
+  const page = document.getElementById('root').getAttribute('data-page');
+  console.log(page);
+  document.getElementById('homeMap').addEventListener('click', () => {
+    if (page !== 'home') {
+      getHome();
+    }
+  });
+  document.getElementById('townMap').addEventListener('click', () => {
+    getTown();
+  });
+}
+
+async function getTown() {
+  await loaderHTML('town');
 }

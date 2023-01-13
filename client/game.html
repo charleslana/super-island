@@ -186,8 +186,8 @@
         </div>
       </nav>
     </header>
-    <main>
-      <div class="main-home draggable">
+    <main id="root">
+      <!-- <div class="main-home draggable">
         <div
           class="home-bed-bg d-flex justify-content-center align-items-center"
           id="homeBed"
@@ -345,7 +345,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </main>
     <!-- Menu float -->
     <div
@@ -571,16 +571,44 @@
         />
       </div>
     </div>
+    <!-- Toast -->
+    <div
+      class="position-fixed top-0 start-50 translate-middle-x z-index-1065 pt-4"
+    >
+      <div
+        class="toast hide align-items-center text-white bg-warning border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-bs-delay="4000"
+        id="toast"
+      >
+        <div class="d-flex">
+          <div
+            class="toast-body d-flex justify-content-center align-items-center w-100"
+            id="toast-text"
+          >
+            Hello, world! This is a toast message.
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <!-- Loading -->
+    <div class="loading-wrapper" id="loading">
+      <img src="assets/images/icons/preloader_v2.webp" alt="Loading image" />
+    </div>
     <!-- Loader -->
     <div class="loader-wrapper" id="loader">
       <div class="loader-content">
         <img src="assets/images/icons/preloader_v2.webp" alt="Loader image" />
         <p>Carregando dados...</p>
       </div>
-    </div>
-    <!-- Loading -->
-    <div class="loading-wrapper" id="loading">
-      <img src="assets/images/icons/preloader_v2.webp" alt="Loading image" />
     </div>
     <!-- Check internet -->
     <div class="internet-wrapper" id="failedInternet">
@@ -596,6 +624,7 @@
     <script src="assets/lib/bootstrap@5.2.3/js/bootstrap.bundle.min.js"></script>
     <script src="assets/lib/preloadjs/preloadjs.min.js"></script>
     <script src="assets/lib/interactjs/interact.min.js"></script>
+    <script src="assets/lib/axios/axios.min.js"></script>
     <script src="assets/js/check.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/game.js"></script>

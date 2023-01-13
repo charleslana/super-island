@@ -12,6 +12,7 @@ addEventListener('DOMContentLoaded', () => {
   chestAFK();
   checkInternet();
   logout();
+  floatMenu();
 });
 
 function load() {
@@ -32,6 +33,7 @@ function load() {
     'assets/images/icons/quest_progress.png',
     'assets/images/icons/quest.png',
     'assets/images/icons/attack.png',
+    'assets/images/icons/item.png',
     'assets/images/avatars/hero_order.png',
     'assets/images/background/home_order_v2.png',
     'assets/images/footer/bag_default.png',
@@ -142,7 +144,7 @@ function hideTooltip() {
 }
 
 function feedNewsBox() {
-  const box = document.getElementById('newFeedBox');
+  const box = document.getElementById('newsFeedBox');
   box.classList.remove('animate__fadeOut');
   box.classList.add('animate__fadeIn');
   const interval = setInterval(() => {
@@ -204,4 +206,43 @@ function removeSession() {
   localStorage.removeItem('tabCount');
   localStorage.removeItem('logged');
   window.location.href = 'index.html';
+}
+
+function floatMenu() {
+  const menuShow = document.getElementById('floatMenuShow');
+  const menuHide = document.getElementById('floatMenuHide');
+  const menuLeftList = document.querySelectorAll('.float-menu-left');
+  const menuRightList = document.querySelectorAll('.float-menu-right');
+  const menuStorage = localStorage.getItem('menuToggle');
+  menuHide.addEventListener('click', () => {
+    menuLeftList.forEach(m => {
+      m.classList.remove('animate__slideInDown');
+      m.classList.add('animate__slideOutUp');
+    });
+    menuRightList.forEach(m => {
+      m.classList.remove('animate__slideInDown');
+      m.classList.add('animate__slideOutUp');
+    });
+    menuHide.style.setProperty('display', 'none', 'important');
+    menuShow.classList.remove('animate__fadeOut');
+    menuShow.style.removeProperty('display');
+    localStorage.setItem('menuToggle', 'hide');
+  });
+  menuShow.addEventListener('click', () => {
+    menuLeftList.forEach(m => {
+      m.classList.remove('animate__slideOutUp');
+      m.classList.add('animate__slideInDown');
+    });
+    menuRightList.forEach(m => {
+      m.classList.remove('animate__slideOutUp');
+      m.classList.add('animate__slideInDown');
+    });
+    menuShow.style.setProperty('display', 'none', 'important');
+    menuHide.classList.remove('animate__fadeOut');
+    menuHide.style.removeProperty('display');
+    localStorage.setItem('menuToggle', 'show');
+  });
+  if (menuStorage === 'hide') {
+    menuHide.click();
+  }
 }

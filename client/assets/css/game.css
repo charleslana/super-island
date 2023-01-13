@@ -224,6 +224,7 @@ footer .navbar [id] > div > span {
   top: 60px;
   padding-left: 20px;
   padding-right: 20px;
+  pointer-events: none;
 }
 
 .news-feed {
@@ -233,6 +234,8 @@ footer .navbar [id] > div > span {
   font-size: 12px;
   font-weight: 500;
   color: white;
+  cursor: pointer;
+  pointer-events: all;
 }
 
 .news-feed marquee {
@@ -274,7 +277,6 @@ footer .navbar [id] > div > span {
   top: 60px;
   padding-left: 20px;
   padding-right: 20px;
-  pointer-events: none;
 }
 
 .bonus {
@@ -557,11 +559,11 @@ main [id] .badge > span {
   z-index: 2;
 }
 
-.float-menu > div:nth-child(2) {
+.float-menu-left:nth-of-type(2) {
   margin-left: 65px;
 }
 
-.float-menu > div:nth-child(3) {
+.float-menu-left:nth-of-type(3) {
   margin-left: 130px;
 }
 
@@ -570,12 +572,14 @@ main [id] .badge > span {
   position: fixed;
   top: 64px;
   left: 5px;
+  z-index: 2;
 }
 
 .float-menu-right {
   position: fixed;
   top: 64px;
   right: 5px;
+  z-index: 2;
 }
 
 .float-menu-left .text,
@@ -685,4 +689,36 @@ main [id] .badge > span {
   background-size: contain;
   width: 50px;
   height: 50px;
+}
+
+.float-menu-hide {
+  position: absolute;
+  top: 273px;
+  left: 38px;
+  width: 52px;
+  background-color: #202429;
+  border-radius: 6px;
+  z-index: 3;
+  font-weight: 900;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.float-menu-show {
+  position: absolute;
+  top: 60px;
+  left: 38px;
+  width: 52px;
+  background-color: #202429;
+  border-radius: 6px;
+  z-index: 3;
+  font-weight: 900;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.float-menu-show span {
+  padding: 4px;
+  right: -9px !important;
+  bottom: -7px !important;
 }

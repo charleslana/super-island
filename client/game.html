@@ -713,7 +713,7 @@
               <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button
-                    class="nav-link active"
+                    class="nav-link active w-100"
                     id="settingsTab"
                     data-bs-toggle="tab"
                     data-bs-target="#settings"
@@ -727,7 +727,7 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <button
-                    class="nav-link"
+                    class="nav-link w-100"
                     id="avatarTab"
                     data-bs-toggle="tab"
                     data-bs-target="#avatar"
@@ -741,7 +741,7 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <button
-                    class="nav-link"
+                    class="nav-link w-100"
                     id="shortcutTab"
                     data-bs-toggle="tab"
                     data-bs-target="#shortcut"
@@ -755,7 +755,7 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <button
-                    class="nav-link"
+                    class="nav-link w-100"
                     id="supportTab"
                     data-bs-toggle="tab"
                     data-bs-target="#support"
@@ -778,7 +778,35 @@
                   role="tabpanel"
                   aria-labelledby="settingsTab"
                 >
-                  Settings
+                  <div class="d-flex justify-content-between mb-3">
+                    <div class="d-flex align-items-center">
+                      <div class="option-language"></div>
+                      <span>Idioma</span>
+                    </div>
+                    <select
+                      class="form-select w-auto shadow-none"
+                      aria-label="Language select option"
+                    >
+                      <option value="en">Inglês</option>
+                      <option value="pt" selected>Português</option>
+                      <option value="es">Espanhol</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-between mb-3">
+                    <div class="d-flex align-items-center">
+                      <div class="option-sound"></div>
+                      <span>Sons</span>
+                    </div>
+                    <div
+                      class="form-check form-switch d-flex align-items-center"
+                    >
+                      <input
+                        class="form-check-input shadow-none"
+                        type="checkbox"
+                        id="switchSound"
+                      />
+                    </div>
+                  </div>
                 </div>
                 <div
                   class="tab-pane"
@@ -828,7 +856,7 @@
                 class="btn btn-primary me-2"
                 data-bs-dismiss="modal"
               >
-                Perfil
+                Meu perfil
               </button>
               <button type="button" class="btn btn-warning" id="logout">
                 Sair
@@ -862,6 +890,7 @@
     </div>
     <script src="assets/lib/bootstrap@5.2.3/js/bootstrap.bundle.min.js"></script>
     <script src="assets/lib/preloadjs/preloadjs.min.js"></script>
+    <script src="assets/lib/soundjs/soundjs.min.js"></script>
     <script src="assets/lib/interactjs/interact.min.js"></script>
     <script src="assets/lib/axios/axios.min.js"></script>
     <script src="assets/js/check.js"></script>

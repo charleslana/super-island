@@ -924,3 +924,52 @@ main [id] .badge > span {
   line-height: 55px;
   font-size: 13px;
 }
+
+.option-language {
+  background-image: url('../images/icons/settings/option_language.png');
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+}
+
+.form-select {
+  border: solid 1px grey;
+  background-color: #24282c;
+  font-size: 13px;
+  color: #a5a6a8;
+  border-radius: 10px;
+  text-align: center;
+  background-image: none;
+  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+}
+
+.form-select:focus {
+  border-color: gray;
+}
+
+.option-sound {
+  background-image: url('../images/icons/settings/option_sound.png');
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+}
+
+.form-switch {
+  transform: scale(1.8);
+}
+
+.form-check-input {
+  background-color: #1a1a1d;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%233C3C48'/%3e%3c/svg%3e") !important;
+}
+
+.form-check-input:focus:not(:checked) {
+  border-color: transparent;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%233C3C48'/%3e%3c/svg%3e") !important;
+}
+
+.form-check-input:checked {
+  border-color: transparent;
+  background-color: #4d91c9 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%231977b6'/%3e%3c/svg%3e") !important;
+}

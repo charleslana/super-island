@@ -1,6 +1,10 @@
 @import url('../fonts/thaleahfat/index.css');
 @import url('../fonts/roboto/index.css');
 
+* {
+  outline: none;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -238,7 +242,7 @@
 
 .modal-body .nav {
   border-bottom: none;
-  --bs-nav-link-padding-x: calc(100vw / 23);
+  --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 0.9rem;
 }
 
@@ -253,6 +257,8 @@
 .modal-body .nav-tabs li {
   width: 25%;
   background-color: #202429;
+  display: flex;
+  justify-content: center;
 }
 
 .modal-body .nav-tabs li:first-child button,
@@ -306,4 +312,9 @@
 
 .z-1 {
   z-index: 1;
+}
+
+.modal-body .tab-content {
+  font-size: 12px;
+  font-weight: 500;
 }

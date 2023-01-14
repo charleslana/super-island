@@ -5,6 +5,7 @@
 
 addEventListener('DOMContentLoaded', async () => {
   load();
+  // document.getElementById('loader').style.display = 'none';
   checkLogged();
   draggable();
   tooltip();
@@ -80,7 +81,26 @@ function load() {
     'assets/images/left-menu/index_default.png',
     'assets/images/left-menu/mail_default.png',
     'assets/images/left-menu/trade_default.png',
+    'assets/images/icons/settings/option_gathering.png',
+    'assets/images/icons/settings/option_eggs.png',
+    'assets/images/icons/settings/option_raid.png',
+    'assets/images/icons/settings/option_pm.png',
+    'assets/images/icons/settings/option_friends.png',
+    'assets/images/icons/settings/option_expedition.png',
+    'assets/images/icons/settings/option_auto_sleep.png',
+    'assets/images/icons/settings/option_auto_repeat.png',
+    'assets/images/icons/settings/option_party.png',
+    'assets/images/icons/settings/option_global.png',
+    'assets/images/icons/settings/option_sound.png',
+    'assets/images/icons/settings/option_language.png',
   ]);
+  //sound
+  createjs.Sound.alternateExtensions = ['mp3'];
+  queue.installPlugin(createjs.Sound);
+  queue.loadFile({
+    id: 'notification',
+    src: 'assets/sounds/notification.mp3',
+  });
   queue.addEventListener('complete', handleComplete);
 }
 
@@ -243,10 +263,32 @@ function settings() {
       document.getElementById('modalSettings')
     );
     myModal.show();
+    if (isSound()) {
+      createjs.Sound.play('notification');
+    }
   });
   document.getElementById('logout').addEventListener('click', () => {
     removeSession();
   });
+  sound();
+}
+
+function isSound() {
+  return JSON.parse(localStorage.getItem('sound') ?? true);
+}
+
+function sound() {
+  const switchSound = document.getElementById('switchSound');
+  switchSound.addEventListener('click', () => {
+    if (switchSound.checked) {
+      localStorage.setItem('sound', 'true');
+      return;
+    }
+    localStorage.setItem('sound', 'false');
+  });
+  if (isSound()) {
+    switchSound.click();
+  }
 }
 
 function checkLogged() {

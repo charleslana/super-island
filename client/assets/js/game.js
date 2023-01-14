@@ -11,7 +11,7 @@ addEventListener('DOMContentLoaded', async () => {
   feedNewsBox();
   chestAFK();
   checkInternet();
-  logout();
+  settings();
   floatMenu();
   await getHome();
   footerMenu();
@@ -237,8 +237,14 @@ function checkBrowserTabs() {
   }
 }
 
-function logout() {
+function settings() {
   document.getElementById('userLogged').addEventListener('click', () => {
+    const myModal = new bootstrap.Modal(
+      document.getElementById('modalSettings')
+    );
+    myModal.show();
+  });
+  document.getElementById('logout').addEventListener('click', () => {
     removeSession();
   });
 }

@@ -79,7 +79,7 @@
     <link rel="stylesheet" href="assets/css/game.css" />
   </head>
   <body>
-    <header>
+    <header id="header">
       <nav class="navbar fixed-top navbar-dark bg-dark p-0 vw-100">
         <div class="progress w-100">
           <div
@@ -550,7 +550,7 @@
       <i class="fa-solid fa-comment-dots"></i>
     </div>
     <!-- Menu footer -->
-    <footer>
+    <footer id="footer">
       <nav class="navbar fixed-bottom navbar-dark bg-dark">
         <div class="container-fluid d-flex justify-content-around">
           <div class="d-flex flex-column align-items-center" id="worldMap">
@@ -694,6 +694,147 @@
             data-bs-dismiss="toast"
             aria-label="Close"
           ></button>
+        </div>
+      </div>
+    </div>
+    <!-- Modal settings -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modalSettings"
+      tabindex="-1"
+      aria-labelledby="modalSettings"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-body-custom">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="settingsTab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#settings"
+                    type="button"
+                    role="tab"
+                    aria-controls="settings"
+                    aria-selected="true"
+                  >
+                    Ajustes
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="avatarTab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#avatar"
+                    type="button"
+                    role="tab"
+                    aria-controls="avatar"
+                    aria-selected="false"
+                  >
+                    Avatar
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="shortcutTab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#shortcut"
+                    type="button"
+                    role="tab"
+                    aria-controls="shortcut"
+                    aria-selected="false"
+                  >
+                    Atalhos
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="supportTab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#support"
+                    type="button"
+                    role="tab"
+                    aria-controls="support"
+                    aria-selected="false"
+                  >
+                    Suporte
+                  </button>
+                </li>
+              </ul>
+              <div
+                class="container tab-content pt-4 pb-4"
+                id="settingsTabContent"
+              >
+                <div
+                  class="tab-pane show active"
+                  id="settings"
+                  role="tabpanel"
+                  aria-labelledby="settingsTab"
+                >
+                  Settings
+                </div>
+                <div
+                  class="tab-pane"
+                  id="avatar"
+                  role="tabpanel"
+                  aria-labelledby="avatarTab"
+                >
+                  Avatar
+                </div>
+                <div
+                  class="tab-pane"
+                  id="shortcut"
+                  role="tabpanel"
+                  aria-labelledby="shortcutTab"
+                >
+                  Atalhos
+                </div>
+                <div
+                  class="tab-pane"
+                  id="support"
+                  role="tabpanel"
+                  aria-labelledby="supportTab"
+                >
+                  Suporte
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-between">
+            <div class="d-flex justify-content-center align-items-center p-3">
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><img
+                  src="assets/images/landing/facebook.png"
+                  alt="Facebook image"
+                  class="me-2"
+              /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="assets/images/landing/discord.png"
+                  alt="Discord image"
+                />
+              </a>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-primary me-2"
+                data-bs-dismiss="modal"
+              >
+                Perfil
+              </button>
+              <button type="button" class="btn btn-warning" id="logout">
+                Sair
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -322,3 +322,7 @@
 .toast.toast-error {
   background-color: #cf4150 !important;
 }
+
+.toast.toast-success {
+  background-color: #129f5a !important;
+}

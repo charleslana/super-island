@@ -10,12 +10,14 @@ function hideLoading() {
   document.getElementById('loading').style.display = 'none';
 }
 
-function toast(message, isError = false) {
+function toast(message, type = 'default') {
   const toastEl = document.getElementById('toast');
-  if (isError) {
+  toastEl.classList.remove('toast-error', 'toast-success');
+  if (type === 'error') {
     toastEl.classList.add('toast-error');
-  } else {
-    toastEl.classList.remove('toast-error');
+  }
+  if (type === 'success') {
+    toastEl.classList.add('toast-success');
   }
   document.getElementById('toast-text').textContent = message;
   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastEl);

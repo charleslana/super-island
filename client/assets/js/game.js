@@ -36,9 +36,13 @@ function load() {
     'assets/images/icons/exp.png',
     'assets/images/icons/exp_vocation.png',
     'assets/images/icons/quest_progress.png',
+    'assets/images/icons/quest_complete.png',
     'assets/images/icons/quest.png',
     'assets/images/icons/attack.png',
     'assets/images/icons/item.png',
+    'assets/images/icons/revive.png',
+    'assets/images/icons/special_exp.png',
+    'assets/images/icons/scroll.png',
     'assets/images/avatars/hero_order.png',
     'assets/images/background/home_order_v2.png',
     'assets/images/footer/bag_default.png',
@@ -98,13 +102,18 @@ function load() {
   createjs.Sound.alternateExtensions = ['mp3'];
   queue.installPlugin(createjs.Sound);
   queue.loadFile({
-    id: 'notification',
-    src: 'assets/sounds/notification.mp3',
+    id: 'btnClick',
+    src: 'assets/sounds/btn_click.mp3',
+  });
+  queue.loadFile({
+    id: 'orderHome',
+    src: 'assets/sounds/order_home.mp3',
   });
   queue.addEventListener('complete', handleComplete);
 }
 
 function handleComplete() {
+  bgmHome();
   const body = document.getElementsByTagName('body')[0];
   document.getElementById('loader').style.display = 'none';
   body.classList.remove('overflow-hidden');
@@ -259,13 +268,11 @@ function checkBrowserTabs() {
 
 function settings() {
   document.getElementById('userLogged').addEventListener('click', () => {
+    btnClick();
     const myModal = new bootstrap.Modal(
       document.getElementById('modalSettings')
     );
     myModal.show();
-    if (isSound()) {
-      createjs.Sound.play('notification');
-    }
   });
   document.getElementById('logout').addEventListener('click', () => {
     removeSession();
@@ -281,10 +288,12 @@ function sound() {
   const switchSound = document.getElementById('switchSound');
   switchSound.addEventListener('click', () => {
     if (switchSound.checked) {
+      createjs.Sound.play('btnClick');
       localStorage.setItem('sound', 'true');
       return;
     }
     localStorage.setItem('sound', 'false');
+    createjs.Sound.stop();
   });
   if (isSound()) {
     switchSound.click();
@@ -355,7 +364,7 @@ async function loaderHTML(page) {
       root.dataset.page = page;
     })
     .catch(function (error) {
-      toast(error.message, true);
+      toast(error.message, 'error');
     })
     .finally(() => {
       hideLoading();
@@ -376,11 +385,15 @@ function footerMenu() {
   const page = document.getElementById('root').getAttribute('data-page');
   document.getElementById('homeMap').addEventListener('click', () => {
     if (page !== 'home') {
+      btnClick();
       getHome();
     }
   });
   document.getElementById('townMap').addEventListener('click', () => {
-    getTown();
+    if (page !== 'town') {
+      btnClick();
+      getTown();
+    }
   });
 }
 
@@ -420,4 +433,16 @@ function menuLeftToggle() {
     menu.classList.remove('animate__slideInLeft');
     menu.classList.add('animate__slideOutLeft');
   });
+}
+
+function btnClick() {
+  if (isSound()) {
+    createjs.Sound.play('btnClick');
+  }
+}
+
+function bgmHome() {
+  if (isSound()) {
+    createjs.Sound.play('orderHome');
+  }
 }

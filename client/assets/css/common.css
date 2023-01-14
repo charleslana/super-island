@@ -236,34 +236,3 @@
 .z-1 {
   z-index: 1;
 }
-
-.internet-wrapper {
-  background-color: transparent;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  text-align: center;
-  z-index: 1090;
-  overflow: hidden;
-  display: none;
-}
-
-.failed-internet {
-  background-color: #da4453;
-  color: white;
-  font-weight: 900;
-  text-transform: uppercase;
-  line-height: 55px;
-  font-size: 13px;
-}
-
-.success-internet {
-  background-color: #8cc152;
-  color: white;
-  font-weight: 900;
-  text-transform: uppercase;
-  line-height: 55px;
-  font-size: 13px;
-}

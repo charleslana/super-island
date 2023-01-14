@@ -144,6 +144,10 @@ footer .navbar {
   padding: 0;
 }
 
+footer .navbar > div > div {
+  flex: 0 0 20%;
+}
+
 footer .navbar span {
   font-size: 10px;
   font-weight: 700;
@@ -206,8 +210,6 @@ footer .navbar [id] {
 
 footer .navbar .active {
   background-color: #2e3439;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 footer .navbar [id] > div > span {

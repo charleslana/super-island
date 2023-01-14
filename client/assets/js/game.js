@@ -355,7 +355,7 @@ async function loaderHTML(page) {
       root.dataset.page = page;
     })
     .catch(function (error) {
-      toast(error.message);
+      toast(error.message, true);
     })
     .finally(() => {
       hideLoading();

@@ -10,9 +10,14 @@ function hideLoading() {
   document.getElementById('loading').style.display = 'none';
 }
 
-function toast(message) {
-  document.getElementById('toast-text').textContent = message;
+function toast(message, isError = false) {
   const toastEl = document.getElementById('toast');
+  if (isError) {
+    toastEl.classList.add('toast-error');
+  } else {
+    toastEl.classList.remove('toast-error');
+  }
+  document.getElementById('toast-text').textContent = message;
   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastEl);
   toastBootstrap.show();
 }

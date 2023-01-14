@@ -318,3 +318,7 @@
   font-size: 12px;
   font-weight: 500;
 }
+
+.toast.toast-error {
+  background-color: #cf4150 !important;
+}
